@@ -6,15 +6,14 @@ class User {
     this.location = _location;
   }
 
-  compareAge(agetToCompare) {
-    return this.firstName + " è più grande di" + agetToCompare.firstName;
+  compareAge(nameToCompare) {
+    if (this.age > nameToCompare.age) {
+      return this.firstName + " è più grande di " + nameToCompare.firstName;
+    }
   }
 }
 
-let compare = function () {};
-
 const matteoAletta = new User("Matteo", "Aletta", 32, "Firenze");
-
-console.log(matteoAletta.compareAge(42));
-
 const giannaMorandi = new User("Gianna", "Morandi", 22, "Torino");
+
+console.log(matteoAletta.compareAge(giannaMorandi));
