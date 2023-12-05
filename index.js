@@ -6,14 +6,16 @@ class User {
     this.location = _location;
   }
 
-  compareAge(nameToCompare) {
-    if (this.age > nameToCompare.age) {
-      return this.firstName + " è più grande di " + nameToCompare.firstName;
+  compareAge(userToCompare) {
+    if (this.age > userToCompare.age) {
+      return this.firstName + " è più grande di " + userToCompare.firstName;
+    } else {
+      return userToCompare.firstName + " è più grande di " + this.firstName;
     }
   }
 }
 
 const matteoAletta = new User("Matteo", "Aletta", 32, "Firenze");
-const giannaMorandi = new User("Gianna", "Morandi", 22, "Torino");
+const giannaMorandi = new User("Gianna", "Morandi", 12, "Torino");
 
 console.log(matteoAletta.compareAge(giannaMorandi));
